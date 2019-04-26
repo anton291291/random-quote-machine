@@ -20,7 +20,6 @@ class  App extends React.Component {
    axios.get(`https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json`)
      .then(res => {
        const randomIndex = Math.floor(Math.random() * res.data.quotes.length);
-       const jsonData = res.data;
        this.setState((state) => ({
          text: res.data.quotes[randomIndex].quote,
          author: res.data.quotes[randomIndex].author
@@ -32,7 +31,6 @@ class  App extends React.Component {
     axios.get(`https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json`)
       .then(res => {
         const randomIndex = Math.floor(Math.random() * res.data.quotes.length);
-        const jsonData = res.data;
         this.setState((state) => ({
           text: res.data.quotes[randomIndex].quote,
           author: res.data.quotes[randomIndex].author
@@ -80,7 +78,8 @@ class  App extends React.Component {
             >NEXT</button>
           <a href={`https://twitter.com/intent/tweet?hashtags=${this.state.text}
           - ${this.state.author}`}
-            id="tweet-quote">
+            id="tweet-quote"
+            target="_blank">
             <i className="fa fa-twitter-square fa-2x"></i>
           </a>
         </div>
