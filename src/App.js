@@ -79,7 +79,8 @@ class  App extends React.Component {
           <a href={`https://twitter.com/intent/tweet?hashtags=${this.state.text}
           - ${this.state.author}`}
             id="tweet-quote"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             <i className="fa fa-twitter-square fa-2x"></i>
           </a>
         </div>
