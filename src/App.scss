@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel');
 @import url('https://fonts.googleapis.com/css?family=Cantarell');
-.root {
+#root {
   margin: 0px;
   padding: 0px;
   border: 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 div {
   white-space: pre-wrap;
